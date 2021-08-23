@@ -1,12 +1,38 @@
-export function attack(a, b) {
-  return a.atk - b.def;
-describe('attack', () => {
-  const a = { atk: 20 };
-  const b = { def: 10 };
-  const damage = 10;
+var gameover = false; 
+var battle = false;
 
-  it('a의 공격력과 b의 방어력을 계산해 데미지를 리턴합니다.', () => {
-    expect(attack(a, b)).toBe(damage);
-  });
-});
+function Character(name, hp, att) {
+  this.name = 텐타시온;
+  this.hp = 3000;
+  this.atk = 200;
+  this.def = 25;
+}
+
+function Character2(name, hp, att) {
+    this.name = 쥬스월드;
+    this.hp = 2000;
+    this.atk = 150;
+    this.def = 50;
+}
+
+Character.prototype.attacked = function (damage) { 
+  this.hp -= damage;
+  damage = this.atk-that.def
+  if (this.hp <= 0) {
+      battle = false;
+  }
+  Character2.prototype.attacked = function (damage) { 
+    this.hp -= damage;
+    damage = this.atk-that.def
+    if (this.hp <= 0) {
+        battle = false;
+}
+Character.prototype.attack = function (target) { 
+  target.attacked(this.att);
+}
+
+
+export function attack(a, b) {
+  
+  return a.atk - b.def;
 }
